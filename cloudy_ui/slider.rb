@@ -13,7 +13,7 @@ class CloudyUi::Slider
       if    center == 0; @@selected_left_end  .draw_rot  x       ,y   ,z ,0 ,1 ,0
       elsif center == 1; @@selected_right_end .draw_rot  x+width ,y   ,z ,0 ,0 ,0
       end
-      @@handle              .draw_rot  selected + x     ,y-6 ,z ,0 ,0.5 ,0
+      @@handle              .draw_rot  selected + x     ,y-7 ,z ,0 ,0.5 ,0
     end
     
     def load_images window, load_path
