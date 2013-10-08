@@ -8,8 +8,8 @@ class CloudyUi::RadioButton
     end
     
     def load_images window, load_path
-      @@empty = Gosu::Image.new window, File.join(load_path, 'radio_full.png')
-      @@full  = Gosu::Image.new window, File.join(load_path, 'radio_empty.png')
+      @@empty = Gosu::Image.new window, File.join(load_path, 'radio_empty.png')
+      @@full  = Gosu::Image.new window, File.join(load_path, 'radio_full.png')
     end
   end
 end
