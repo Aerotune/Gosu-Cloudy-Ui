@@ -8,13 +8,18 @@ class Window < Gosu::Window
   end
   
   def draw
-    fill 0xFFFFFFFF
+    #fill 0xFFFFFFFF
+    draw_window
     draw_button_normal
     draw_button_hover
     draw_button_active
     draw_slider1
     draw_slider2
     draw_slider3
+  end
+  
+  def draw_window
+    CloudyUi::Window.draw self, 10, 10, 0, 305, 135
   end
   
   def draw_button_normal
