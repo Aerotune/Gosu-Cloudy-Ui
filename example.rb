@@ -16,6 +16,8 @@ class Window < Gosu::Window
     draw_slider1
     draw_slider2
     draw_slider3
+    draw_radio_full
+    draw_radio_empty
   end
   
   def draw_window
@@ -54,7 +56,7 @@ class Window < Gosu::Window
   
   def draw_slider1
     x = 150
-    y = 20
+    y = 25
     z = 0
     width    = 150
     progress = 0.5
@@ -63,7 +65,7 @@ class Window < Gosu::Window
   
   def draw_slider2
     x = 150
-    y = 50
+    y = 55
     z = 0
     width    = 150
     progress = 0.2
@@ -73,12 +75,26 @@ class Window < Gosu::Window
   
   def draw_slider3
     x = 150
-    y = 80
+    y = 85
     z = 0
     width    = 150
     progress = 0.5
     center   = 1
     CloudyUi::Slider.draw x, y, z, width, progress, center
+  end
+  
+  def draw_radio_full
+    x = 145
+    y = 110
+    z = 0
+    CloudyUi::RadioButton.draw x, y, z, :full
+  end
+  
+  def draw_radio_empty
+    x = 170
+    y = 110
+    z = 0
+    CloudyUi::RadioButton.draw x, y, z, :empty
   end
   
   def fill color, z=0      
