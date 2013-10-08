@@ -5,6 +5,10 @@ Gosu-Cloudy-Ui
 
 Drawing UI Kit based on http://kbsportfolio.com/2011/10/16/resource-for-designer-cloudy-ui-kit/
 
+Load images before usage
+
+    CloudyUi::load_images window
+
 Button states are :normal, :hover or :active
 
     CloudyUi::Button.draw x, y, z, width, height, state
