@@ -18,10 +18,13 @@ class Window < Gosu::Window
     draw_slider3
     draw_radio_full
     draw_radio_empty
+    draw_dynamic_field
+    draw_scrollbar
+    
   end
   
   def draw_window
-    CloudyUi::Window.draw self, 10, 10, 0, 305, 135
+    CloudyUi::Window.draw self, 10, 10, 0, 305, 435
   end
   
   def draw_button_normal
@@ -95,6 +98,18 @@ class Window < Gosu::Window
     y = 110
     z = 0
     CloudyUi::RadioButton.draw x, y, z, :empty
+  end
+  
+  def draw_dynamic_field
+    CloudyUi::DynamicField.draw self, 50, 140, 0, 260, 300
+  end
+  
+  def draw_scrollbar
+    x = 296
+    y = 150
+    z = 0
+    height = 280
+    CloudyUi::Scrollbar.draw x, y, z, height, 0.1, 0.9
   end
   
   def fill color, z=0      
