@@ -101,7 +101,7 @@ class Window < Gosu::Window
   end
   
   def draw_dynamic_field
-    CloudyUi::DynamicField.draw self, 50, 140, 0, 260, 300
+    CloudyUi::DynamicField.draw self, 50, 150, 0, 239, 280
   end
   
   def draw_scrollbar

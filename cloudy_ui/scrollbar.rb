@@ -4,9 +4,9 @@ class CloudyUi::Scrollbar
     ## scrollbar height in pixels
     ## handle_top, handle_bottom in range 0..1
     def draw x, y, z, height, handle_top, handle_bottom
-      @@scrollbar_middle.draw x, y, z, 1, height
-      @@scrollbar_top.draw x, y-@@scrollbar_top.height, z
-      @@scrollbar_bottom.draw x, y+height, z
+      @@scrollbar_middle  .draw x, y+@@scrollbar_top.height-2, z, 1, height-@@scrollbar_top.height*2+4
+      @@scrollbar_top     .draw x, y-2, z
+      @@scrollbar_bottom  .draw x, y+height-@@scrollbar_top.height+1, z
       
       
       handle_top_y    = y + handle_top    * height
