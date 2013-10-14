@@ -8,19 +8,20 @@ class CloudyUi::Scrollbar
       @@scrollbar_top     .draw x, y-2, z
       @@scrollbar_bottom  .draw x, y+height-@@scrollbar_top.height+1, z
       
-      
-      handle_top_y    = y + handle_top    * height
-      handle_bottom_y = y + handle_bottom * height
+      height -= @@handle_top.height
+      handle_top_y    = y + handle_top    * height + @@handle_top.height - 2
+      handle_bottom_y = y + handle_bottom * height + 1
       handle_height   = handle_bottom_y - handle_top_y
+      handle_height   = 0 if handle_height < 0
       handle_width = @@scrollbar_middle.width
       
       @@window.draw_quad x+1                ,handle_top_y-2                 ,0xFFfafafa,
                          x-1 + handle_width ,handle_top_y-2                 ,0xFFfafafa,
-                         x-1 + handle_width ,handle_top_y+2 + handle_height ,0xFFe9e9e9,
-                         x+1                ,handle_top_y+2 + handle_height ,0xFFe9e9e9, z
+                         x-1 + handle_width ,handle_top_y+1 + handle_height ,0xFFe9e9e9,
+                         x+1                ,handle_top_y+1 + handle_height ,0xFFe9e9e9, z
       
       @@handle_middle .draw x+1, handle_top_y, z, 1, handle_height
-      @@handle_top    .draw x+1, handle_top_y-@@handle_top.height, z
+      @@handle_top    .draw x+1, handle_top_y - @@handle_top.height, z
       @@handle_bottom .draw x+1, handle_bottom_y, z
     end
     

@@ -8,7 +8,7 @@ class Window < Gosu::Window
   end
   
   def draw
-    #fill 0xFFFFFFFF
+    fill 0xFFFFFFFF
     draw_window
     draw_button_normal
     draw_button_hover
@@ -101,11 +101,11 @@ class Window < Gosu::Window
   end
   
   def draw_dynamic_field
-    CloudyUi::DynamicField.draw self, 50, 150, 0, 239, 280
+    CloudyUi::DynamicField.draw self, 150, 150, 0, 148, 280
   end
   
   def draw_scrollbar
-    x = 296
+    x = 295
     y = 150
     z = 0
     height = 280
