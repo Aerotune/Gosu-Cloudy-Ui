@@ -1,5 +1,5 @@
 require 'gosu'
-require './cloudy_ui'
+require_relative '../lib/cloudy_ui'
 
 class Window < Gosu::Window
   def initialize
