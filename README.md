@@ -4,9 +4,10 @@ Gosu-Cloudy-Ui
 ![Current elements](/screenshot.png)
 
 Drawing UI Kit based on http://kbsportfolio.com/2011/10/16/resource-for-designer-cloudy-ui-kit/
+
 Gem on rubygems http://rubygems.org/gems/cloudy_ui
 
-Require CloudyUi
+Make sure you've loaded CloudyUi
 
     require 'cloudy_ui'
 
